@@ -30,13 +30,7 @@ A aplicação está preparada para rodar **localmente** ou em **containers Docke
 ```
 project-root/
  ┣ Backend_auth/        → API (NestJS + Prisma)
- ┃ ┣ Dockerfile
- ┃ ┣ .env
- ┃ ┣ .env.example
  ┣ front-auth/          → Front (Next.js + Tailwind)
- ┃ ┣ Dockerfile
- ┃ ┣ .env
- ┃ ┣ .env.example
  ┗ docker-compose.yml   → Orquestração com Docker
 ```
 
