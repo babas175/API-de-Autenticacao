@@ -1,4 +1,3 @@
-version: '3.9'
 services:
   db:
     image: mysql:8
@@ -12,24 +11,26 @@ services:
       - mysql_data:/var/lib/mysql
 
   api:
-    build: ./api
+    build: ./Backend_auth
     container_name: nest-api
     ports:
-      - "3000:3000"
+      - "4000:4000"
     env_file:
-      - ./api/.env
+      - ./Backend_auth/.env
     environment:
       DATABASE_URL: mysql://root@db:3306/auth_db
     depends_on:
       - db
 
   front:
-    build: ./front
-    container_name: react-front
+    build: ./front_auth
+    container_name: next-front
     ports:
-      - "5173:5173"
+      - "3000:3000"
     env_file:
-      - ./front/.env
+      - ./front_auth/.env
+    environment:
+      NEXT_PUBLIC_API_URL: http://api:4000
     depends_on:
       - api
 
