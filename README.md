@@ -43,7 +43,7 @@ src/
 
 ### 1. Clone o repositório
 ```bash
-git clone https://github.com/seu-repo/nest-auth-api.git
+git clone https://github.com/babas175/API-de-Autenticacao.git
 cd nest-auth-api
 ```
 
