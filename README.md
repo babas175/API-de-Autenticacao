@@ -40,7 +40,7 @@ project-root/
 
 ### 1. Clonar o repositório
 ```bash
-git clone https://github.com/seu-repo/projeto.git
+git clone https://github.com/babas175/API-de-Autenticacao.git
 cd projeto
 ```
 
