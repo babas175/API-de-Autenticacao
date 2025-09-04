@@ -22,6 +22,8 @@ services:
     depends_on:
       - db
 
+
+
   front:
     build: ./front_auth
     container_name: next-front
@@ -33,6 +35,8 @@ services:
       NEXT_PUBLIC_API_URL: http://api:4000
     depends_on:
       - api
+    command: npm run dev -- --turbopack -p 3000 -H 0.0.0.0
+
 
 volumes:
   mysql_data:
